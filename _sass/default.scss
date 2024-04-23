@@ -114,6 +114,18 @@
     border-radius: 0.5em;
     background-color: var(--sec-bg);
 }
+/* Display posts vertically on mobile */
+@media (max-width: 1200px) {
+    .posts-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .post-card {
+        width: 75vw;
+        max-width: 75vw;
+    }
+}
+
 /* Remove excess space for post title and date */
 /* Remove emoji color for post date */
 .post-title, .post-date {
@@ -125,6 +137,7 @@
 @supports (font-variation-settings: normal) {
     .post-date { font-family: InterVariable, "Noto Emoji", sans-serif; }
 }
+
 /* Truncate overflow text for each post */
 .post-card > a, .post-tags  {
     white-space: nowrap;
