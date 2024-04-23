@@ -1,5 +1,46 @@
 ---
-title: Home
+title: frogbubbletea's blog
 ---
 
-<h1>{{ "Hello World!" | downcase }}</h1>
+<div class="front-page">
+    <h1>🪻</h1>
+    <h2>Blog</h2>
+    <div class="front-page-scroll-prompt">
+        <p>Posts</p>
+        <a href="#posts">
+            <svg id="front-page-down-arrow" fill="currentColor" height="16px" width="16px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                viewBox="0 0 330 330" xml:space="preserve">
+            <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/>
+            </svg>
+        </a>
+    </div>
+</div>
+<!-- Intro -->
+<div class="intro" id="posts">
+    <h2>🌾</h2>
+    <p>I share my programming experiences and random ideas here. Enjoy!</p>
+</div>
+<!-- Posts list heading -->
+<div class="intro posts-heading">
+    <h2>Latest Posts</h2>
+</div>
+<!-- Posts list -->
+<div class="posts-list">
+    {% for post in site.posts %}
+        <div class="post-card">
+            <a class="post-title" href="{{ post.url | relative_url }}"><h3>{{ post.title }}</h3></a>
+            {{ post.excerpt }}  <!-- Already a paragraph! -->
+            <p class="post-date">🕒 {{ post.date | date_to_string }}</p>
+            <!-- Tags -->
+            <div class="post-tags">
+                {% for tag in post.tags %}
+                    <a>
+                        <button class="tag-box" type="button">{{ tag }}</button>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+</div>

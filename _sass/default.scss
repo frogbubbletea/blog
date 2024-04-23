@@ -1,0 +1,151 @@
+/*  Make frontPage occupy whole screen
+    and align contents to the center */
+.front-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Set front page emoji size */
+.front-page > h1 {
+    font-size: 4em;
+    line-height: 0;
+}
+
+/* Move front page links to top right */
+.front-page-nav {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    align-items: center;
+    right: 1em;
+    top: 1em;
+    column-gap: 1em;
+}
+
+/* Disable line under front page links */
+.front-page-nav > a {
+    text-decoration: none;
+}
+
+/* Align the scroll down prompt to the bottom of frontPage */
+.front-page > .front-page-scroll-prompt {
+    position: absolute;
+    left: 0;
+    bottom: 1em;
+    width: 100%;
+}
+/* Animate the scroll down prompt arrow */
+#front-page-down-arrow {
+    color: var(--base-fg);
+    animation:updown 2s ease-in-out infinite;
+}
+@keyframes updown { 
+    0% {  
+        transform:translateY(0em); 
+    } 
+    50% {
+        transform:translateY(0.5em);
+    }
+    100% {
+        transform:translateY(0em);
+    }
+}
+
+/* Limit intro paragraph width and center it */
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 1em 0 1em 0;
+    text-align: center;
+    background-color: var(--sec-bg)
+}
+
+.intro > h2, .intro > p {
+    max-width: 75%
+}
+
+/* Set color for posts list heading */
+.intro.posts-heading {
+    background-color: var(--base-bg);
+}
+
+/* Layout for posts list */
+.posts-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1em;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 1em 12.5vw 1em 12.5vw;
+    background-color: var(--base-bg);
+}
+
+/* Style for each post */
+.post-card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    width: 25em;
+    max-width: 25em;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: var(--sec-bg);
+}
+/* Remove excess space for post title and date */
+/* Remove emoji color for post date */
+.post-title, .post-date {
+    line-height: 0;
+}
+.post-date {
+    font-family: Inter, "Noto Emoji", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+    .post-date { font-family: InterVariable, "Noto Emoji", sans-serif; }
+}
+/* Truncate overflow text for each post */
+.post-card > a, .post-tags  {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+/* Set text color for each post */
+.post-card > a, .tag-box {
+    text-decoration: none;
+}
+
+/* Style for each tag */
+.tag-box {
+    font-size: 0.75em;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 0.25em 0.5em;
+    transition: 200ms;
+    background-color: var(--url);
+    color: var(--base-bg);
+    border: unset;
+    cursor: pointer;
+}

@@ -1,5 +1,303 @@
+:root {
+  --base-bg: #fdf6e3; /* everforest light medium bg0 */
+  --sec-bg: #efebd4; /* everforest light medium bg_dim */
+  --dark-bg: #2d353b; /* everforest dark medium bg0 */
+  --base-fg: #5c6a72; /* everforest light medium fg */
+  --dark-fg: #d3c6aa; /* everforest dark medium fg */
+  --url: #8da101; /* everforest light medium green */
+  /* Alternate color scheme */
+  /*--base-bg: #eff1f5;*/ /* catppuccin latte base */
+  /*--sec-bg: #dce0e8;*/ /* catppuccin latte crust */
+  /*--dark-bg: #1e2030;*/ /* catppuccin macchiato mantle */
+  /*--base-fg: #4c4f69;*/ /* catppuccin latte text */
+  /*--dark-fg: #cad3f5;*/ /* catppuccin macchiato text */
+  /*--url: #40a02b;*/ /* catppuccin latte green */
+}
+
+/* Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Apply background color to all pages */
+body {
+  background-color: var(--base-bg);
+  margin: 0;
+  padding: 0;
+  animation: fade-in 0.7s ease-in forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Animate theme changes */
+body {
+  transition: 200ms;
+}
+
+/* Set font for headings */
+h1, h2, h3 {
+  font-family: "Libre Baskerville", "Noto Color Emoji", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--base-fg);
+}
+
+/* Set font for body text */
+p, a, ul, dl, select {
+  font-family: Inter, "Noto Color Emoji", sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+  color: var(--base-fg);
+}
+
+@supports (font-variation-settings: normal) {
+  p, a, ul, dl, select {
+    font-family: InterVariable, "Noto Color Emoji", sans-serif;
+  }
+}
+/* Set font for buttons */
+button {
+  font-family: Inter, "Noto Emoji", sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+  font-size: 1em;
+  text-decoration: none;
+  padding: 0.75em 1.5em;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: 200ms;
+}
+
+@supports (font-variation-settings: normal) {
+  button {
+    font-family: InterVariable, "Noto Emoji", sans-serif;
+  }
+}
+/* Set link text color */
+a {
+  color: var(--url);
+}
+
 .current {
   color: green;
+}
+
+/*  Make frontPage occupy whole screen
+    and align contents to the center */
+.front-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Set front page emoji size */
+.front-page > h1 {
+  font-size: 4em;
+  line-height: 0;
+}
+
+/* Move front page links to top right */
+.front-page-nav {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  align-items: center;
+  right: 1em;
+  top: 1em;
+  column-gap: 1em;
+}
+
+/* Disable line under front page links */
+.front-page-nav > a {
+  text-decoration: none;
+}
+
+/* Align the scroll down prompt to the bottom of frontPage */
+.front-page > .front-page-scroll-prompt {
+  position: absolute;
+  left: 0;
+  bottom: 1em;
+  width: 100%;
+}
+
+/* Animate the scroll down prompt arrow */
+#front-page-down-arrow {
+  color: var(--base-fg);
+  animation: updown 2s ease-in-out infinite;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0em);
+  }
+  50% {
+    transform: translateY(0.5em);
+  }
+  100% {
+    transform: translateY(0em);
+  }
+}
+/* Limit intro paragraph width and center it */
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  max-width: 100%;
+  margin: 0;
+  padding: 1em 0 1em 0;
+  text-align: center;
+  background-color: var(--sec-bg);
+}
+
+.intro > h2, .intro > p {
+  max-width: 75%;
+}
+
+/* Set color for posts list heading */
+.intro.posts-heading {
+  background-color: var(--base-bg);
+}
+
+/* Layout for posts list */
+.posts-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1em;
+  width: 100vw;
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 1em 12.5vw 1em 12.5vw;
+  background-color: var(--base-bg);
+}
+
+/* Style for each post */
+.post-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 25em;
+  max-width: 25em;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: var(--sec-bg);
+}
+
+/* Remove excess space for post title and date */
+/* Remove emoji color for post date */
+.post-title, .post-date {
+  line-height: 0;
+}
+
+.post-date {
+  font-family: Inter, "Noto Emoji", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  .post-date {
+    font-family: InterVariable, "Noto Emoji", sans-serif;
+  }
+}
+/* Truncate overflow text for each post */
+.post-card > a, .post-tags {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+}
+
+/* Set text color for each post */
+.post-card > a, .tag-box {
+  text-decoration: none;
+}
+
+/* Style for each tag */
+.tag-box {
+  font-size: 0.75em;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.25em 0.5em;
+  transition: 200ms;
+  background-color: var(--url);
+  color: var(--base-bg);
+  border: unset;
+  cursor: pointer;
+}
+
+/* Style footer */
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: center;
+  box-sizing: border-box;
+  width: 100vw;
+  max-width: 100%;
+  padding: 0.5em 1em 0.5em 1em;
+  margin: 0;
+  background-color: var(--dark-bg);
+}
+
+/* Disable underlining in footer buttons */
+.footer-buttons > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Align everything in footer to center */
+.footer > * {
+  align-self: center;
+}
+
+/* Align text to the left, icons to the right */
+.footer > p {
+  text-align: left;
+  color: var(--dark-fg);
+}
+
+/* Set color of footer icons */
+#footer-github, #footer-email {
+  transition: 200ms;
+  color: var(--dark-fg);
+}
+
+#footer-github:hover, #footer-email:hover {
+  filter: brightness(0.9);
+}
+
+#footer-github:active, #footer-email:active {
+  filter: brightness(0.8);
+}
+
+/* Set layout of footer buttons */
+.footer-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  column-gap: 1em;
 }
 
 /*# sourceMappingURL=styles.css.map */

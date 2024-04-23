@@ -1,3 +1,84 @@
+:root {
+    --base-bg: #fdf6e3;  /* everforest light medium bg0 */
+    --sec-bg: #efebd4;  /* everforest light medium bg_dim */
+    --dark-bg: #2d353b;  /* everforest dark medium bg0 */
+    --base-fg: #5c6a72;  /* everforest light medium fg */
+    --dark-fg: #d3c6aa;  /* everforest dark medium fg */
+    --url: #8da101;  /* everforest light medium green */
+
+    /* Alternate color scheme */
+    /*--base-bg: #eff1f5;*/  /* catppuccin latte base */
+    /*--sec-bg: #dce0e8;*/  /* catppuccin latte crust */
+    /*--dark-bg: #1e2030;*/ /* catppuccin macchiato mantle */
+    /*--base-fg: #4c4f69;*/  /* catppuccin latte text */ 
+    /*--dark-fg: #cad3f5;*/  /* catppuccin macchiato text */
+    /*--url: #40a02b;*/ /* catppuccin latte green */
+}
+
+/* Enable smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Apply background color to all pages */
+body {
+    background-color: var(--base-bg);
+    margin: 0;
+    padding: 0;
+    animation: fade-in 0.7s ease-in forwards;
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animate theme changes */
+body {
+    transition: 200ms;
+}
+
+/* Set font for headings */
+h1, h2, h3 {
+    font-family: "Libre Baskerville", "Noto Color Emoji", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--base-fg)
+}
+
+/* Set font for body text */
+p, a, ul, dl, select {
+    font-family: Inter, "Noto Color Emoji", sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+    color: var(--base-fg)
+}
+@supports (font-variation-settings: normal) {
+    p, a, ul, dl, select { font-family: InterVariable, "Noto Color Emoji", sans-serif; }
+}
+
+/* Set font for buttons */
+button {
+    font-family: Inter, "Noto Emoji", sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+    font-size: 1em;
+    text-decoration: none;
+    padding: 0.75em 1.5em;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: 200ms;
+}
+@supports (font-variation-settings: normal) {
+    button { font-family: InterVariable, "Noto Emoji", sans-serif; }
+}
+
+/* Set link text color */
+a {
+    color: var(--url)
+}
+
 .current {
     color: green;
 }
