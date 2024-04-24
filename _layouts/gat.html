@@ -1,0 +1,55 @@
+---
+layout: default
+title: page.name
+---
+<!-- "tag" is renamed to "gat" due to name collision with Jekyll's tag system -->
+<!-- The tag's name frontmatter value must be same as the tag! -->
+
+<div class="front-page">
+    <h1>🔖</h1>
+    <h2>{{ page.name }}</h2>
+    <div class="front-page-scroll-prompt gat-page">
+        <p>Posts with this tag</p>
+        <a href="#excerpt">{% include front-page-scroll-prompt.html %}</a>
+    </div>
+    <!-- Back button -->
+    {% include back-gat.html %}
+</div>
+
+<!-- Intro (no. of posts with the tag) -->
+<div class="intro" id="posts">
+    <h2>🫒</h2>
+    {{ content }}
+</div>
+
+<!-- Posts list heading -->
+<div class="intro posts-heading">
+    {% for tag in site.tags %}
+        {% if tag[0] == page.name %}
+            <h2>{{ tag[1] | size }} posts</h2>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<!-- Posts list -->
+<div class="posts-list tag-posts">
+    {% for tag in site.tags %}
+        {% if tag[0] == page.name %}
+            {% for post in tag[1] %}
+                <div class="post-card">
+                    <a class="post-title" href="{{ post.url | relative_url }}"><h3>{{ post.title }}</h3></a>
+                    {{ post.excerpt }}  <!-- Already a paragraph! -->
+                    <p class="post-date">🕒 {{ post.date | date_to_string }}</p>
+                    <!-- Tags -->
+                    <div class="post-tags">
+                        {% for tag in post.tags %}
+                            <a>
+                                <button class="tag-box" type="button">{{ tag }}</button>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+</div>

@@ -1,8 +1,15 @@
 collections:
   authors:
     output: true
+  gats:
+    output: true
 
 defaults:
+  - scope:
+      path: ""
+      type: "gats"
+    values:
+      layout: "gat"
   - scope:
       path: ""
       type: "authors"

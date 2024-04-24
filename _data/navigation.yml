@@ -1,2 +1,6 @@
+- name: 🪻 Blog
+  link: ./
+- name: 🍋 Tags
+  link: ./tags.html
 - name: 🍵 Home
   link: https://frogbubbletea.github.io

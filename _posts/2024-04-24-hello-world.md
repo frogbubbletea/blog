@@ -31,5 +31,9 @@ Hello World!
 print("Hello World!")
 ```
 
+This is an image. Is it too wide?
+
+![Test image](https://raw.githubusercontent.com/frogbubbletea/jack-the-ripper/main/sample_screenshots/add_track.png)
+
 <!-- Include style for the codeblock -->
 {% include codeblock.html %}
