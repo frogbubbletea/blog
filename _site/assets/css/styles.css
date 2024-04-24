@@ -52,14 +52,14 @@ h1, h2, h3 {
 }
 
 /* Set font for body text */
-p, span, a, ul, dl, select {
+p, a, ul, dl, select {
   font-family: Inter, "Noto Color Emoji", sans-serif;
   font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
   color: var(--base-fg);
 }
 
 @supports (font-variation-settings: normal) {
-  p, span, a, ul, dl, select {
+  p, a, ul, dl, select {
     font-family: InterVariable, "Noto Color Emoji", sans-serif;
   }
 }
@@ -281,6 +281,18 @@ code {
   box-shadow: inset 0px 0px 0px 2px var(--url);
 }
 
+/* Set paginator font */
+.paginator-controls > span {
+  font-family: Inter, "Noto Color Emoji", sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+  color: var(--base-fg);
+}
+
+@supports (font-variation-settings: normal) {
+  .paginator-controls > span {
+    font-family: InterVariable, "Noto Color Emoji", sans-serif;
+  }
+}
 /* Fix paginator padding */
 .paginator {
   padding: 1em 0 2em 0;

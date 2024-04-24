@@ -169,6 +169,15 @@
     box-shadow: inset 0px 0px 0px 2px var(--url);
 }
 
+/* Set paginator font */
+.paginator-controls > span {
+    font-family: Inter, "Noto Color Emoji", sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+    color: var(--base-fg)
+}
+@supports (font-variation-settings: normal) {
+    .paginator-controls > span { font-family: InterVariable, "Noto Color Emoji", sans-serif; }
+}
 /* Fix paginator padding */
 .paginator {
     padding: 1em 0 2em 0;
