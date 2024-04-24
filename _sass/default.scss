@@ -59,6 +59,10 @@
         transform:translateY(0em);
     }
 }
+/* Remove link underlines in scroll down prompt */
+.front-page-scroll-prompt > a {
+    text-decoration: none;
+}
 
 /* Limit intro paragraph width and center it */
 .intro {
