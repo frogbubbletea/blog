@@ -16,18 +16,20 @@
   </head>
   <body>
     <!-- Load color schemes -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- RFC 6265 prevents cookies from working across pages in the blog -->
+<!-- https://stackoverflow.com/questions/47419602/setting-a-cookie-on-github-io-domain-in-javascript -->
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
-<script src="/blog/assets/js/change-theme.js"></script>
+<script src="/blog/assets/js/change-theme.js"></script> -->
 <div class="front-page-nav">
     
       <a href="/blog/" >🪻 Blog</a>
     
       <a href="/blog/tags.html" >🍋 Tags</a>
     
-    <form>
+    <!-- <form>
       <select id="front-page-color-select" onchange="changeColorscheme()"></select>
-  </form>
+  </form> -->
 </div>
     <!-- 404 Error message -->
 <div class="front-page">
@@ -36,7 +38,7 @@
     <p>The page you're looking for could not be found.</p>
     <div class="front-page-scroll-prompt">
         <p>Back to blog</p>
-        <a href="index.html">🪻</a>
+        <a href="/blog/">🪻</a>
     </div>
     <div class="back-nav">
     <a href="/blog/..">🍵 Home</a>

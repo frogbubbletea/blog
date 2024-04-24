@@ -1,12 +1,14 @@
 <!-- Load color schemes -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- RFC 6265 prevents cookies from working across pages in the blog -->
+<!-- https://stackoverflow.com/questions/47419602/setting-a-cookie-on-github-io-domain-in-javascript -->
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
-<script src="{{ site.baseurl }}/assets/js/change-theme.js"></script>
+<script src="{{ site.baseurl }}/assets/js/change-theme.js"></script> -->
 <div class="front-page-nav">
     {% for item in site.data.navigation %}
       <a href="{{ item.link | relative_url }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
     {% endfor %}
-    <form>
+    <!-- <form>
       <select id="front-page-color-select" onchange="changeColorscheme()"></select>
-  </form>
+  </form> -->
 </div>
