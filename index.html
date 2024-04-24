@@ -18,18 +18,21 @@ title: frogbubbletea's blog
     </div>
     {% include back-home.html %}
 </div>
+
 <!-- Intro -->
 <div class="intro" id="posts">
     <h2>🌾</h2>
     <p>I share my programming experiences and random ideas here. Enjoy!</p>
 </div>
+
 <!-- Posts list heading -->
 <div class="intro posts-heading">
     <h2>Latest Posts</h2>
 </div>
+
 <!-- Posts list -->
 <div class="posts-list">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
         <div class="post-card">
             <a class="post-title" href="{{ post.url | relative_url }}"><h3>{{ post.title }}</h3></a>
             {{ post.excerpt }}  <!-- Already a paragraph! -->
@@ -44,4 +47,22 @@ title: frogbubbletea's blog
             </div>
         </div>
     {% endfor %}
+</div>
+
+<!-- Paginator -->
+<div class="intro paginator">
+    <h2>🪻</h2>
+    <div class="paginator-controls">
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | relative_url }}#posts" class="previous-page"><</a>
+        {% else %}
+            <span class="previous-page"><</span>
+        {% endif %}
+        <span class="page-num">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}#posts" class="next-page">></a>
+        {% else %}
+            <span class="next-page">></span>
+        {% endif %}
+    </div>
 </div>

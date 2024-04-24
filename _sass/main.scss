@@ -53,13 +53,13 @@ h1, h2, h3 {
 }
 
 /* Set font for body text */
-p, a, ul, dl, select {
+p, span, a, ul, dl, select {
     font-family: Inter, "Noto Color Emoji", sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
     color: var(--base-fg)
 }
 @supports (font-variation-settings: normal) {
-    p, a, ul, dl, select { font-family: InterVariable, "Noto Color Emoji", sans-serif; }
+    p, span, a, ul, dl, select { font-family: InterVariable, "Noto Color Emoji", sans-serif; }
 }
 
 /* Set font for buttons */

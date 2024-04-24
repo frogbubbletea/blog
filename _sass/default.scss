@@ -168,3 +168,21 @@
 .post-card:hover {
     box-shadow: inset 0px 0px 0px 2px var(--url);
 }
+
+/* Fix paginator padding */
+.paginator {
+    padding: 1em 0 2em 0;
+}
+/* Set paginator controls layout */
+.paginator-controls {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5em;
+}
+/* Disable paginator buttons underline */
+.paginator-controls > a {
+    text-decoration: none;
+}

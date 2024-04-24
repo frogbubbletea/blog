@@ -52,14 +52,14 @@ h1, h2, h3 {
 }
 
 /* Set font for body text */
-p, a, ul, dl, select {
+p, span, a, ul, dl, select {
   font-family: Inter, "Noto Color Emoji", sans-serif;
   font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
   color: var(--base-fg);
 }
 
 @supports (font-variation-settings: normal) {
-  p, a, ul, dl, select {
+  p, span, a, ul, dl, select {
     font-family: InterVariable, "Noto Color Emoji", sans-serif;
   }
 }
@@ -279,6 +279,26 @@ code {
 /* Hover effect for posts */
 .post-card:hover {
   box-shadow: inset 0px 0px 0px 2px var(--url);
+}
+
+/* Fix paginator padding */
+.paginator {
+  padding: 1em 0 2em 0;
+}
+
+/* Set paginator controls layout */
+.paginator-controls {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5em;
+}
+
+/* Disable paginator buttons underline */
+.paginator-controls > a {
+  text-decoration: none;
 }
 
 /* Center tags in front page of post */
