@@ -1,14 +1,30 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
 
-<p>
-  {{ page.date | date_to_string }}
-  {% assign author = site.authors | where: 'name', page.author | first %}
-  {% if author %}
-    - <a href="{{ author.url | relative_url }}">{{ author.name }}</a>
-  {% endif %}
-</p>
+<div class="front-page">
+    <h1>🌲</h1>
+    <h2>{{ page.title }}</h2>
+    <div class="front-page-scroll-prompt post-page">
+        <div class="post-page-date-author">
+            <p class="post-page-date">{{ page.date | date_to_string }}</p>
+            <p class="post-page-separator">✦</p>
+            <p class="post-page-author">
+                {% assign author = site.authors | where: 'name', page.author | first %}
+                {% if author %}
+                    {{ author.name }}
+                {% endif %}
+            </p>
+        </div>
+        <a href="#excerpt">{% include front-page-scroll-prompt.html %}</a>
+    </div>
+</div>
 
-{{ content }}
+<div class="intro" id="excerpt">
+    <h2>🪵</h2>
+    {{ page.excerpt }}
+</div>
+
+<div class="post-content" id="content">
+    {{ content | remove_first: page.excerpt }}
+</div>

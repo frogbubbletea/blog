@@ -1,0 +1,49 @@
+/* Center align post date and author around ✦ */
+.post-page-date-author {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5em;
+}
+.post-page-separator {
+    text-align: center;
+    justify-self: center;
+}
+.post-page-date, .post-page-author {
+    flex: 1;
+}
+.post-page-date {
+    text-align: right;
+    flex-grow: 1;
+}
+.post-page-author {
+    text-align: left;
+    flex-grow: 1;
+}
+
+/* Limit width of content */
+.post-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    box-sizing: border-box;
+    width: 100vw;
+    max-width: 100%;
+    padding: 2em 0 2em 0;
+}
+.post-content > * {
+    width: 50vw;
+    max-width: 50%;
+}
+/* Width of content for mobile */
+@media (max-width: 1200px) {
+    .post-content > * {
+        width: 75vw;
+        max-width: 75%;
+    }
+}

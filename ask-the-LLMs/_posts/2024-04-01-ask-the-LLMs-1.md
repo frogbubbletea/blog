@@ -32,7 +32,6 @@ You can find a complete list of Google One Premium subscription prices by countr
 
 Please note: This information is accurate as of November 15, 2023. Prices may change in the future.
 
-
 ## ChatGPT:
 
 The pricing for Google One Premium subscriptions can vary based on different countries and regions. As these prices are subject to change and may vary over time, it's best to refer to the official Google One website or contact Google directly for the most up-to-date and accurate information regarding subscription costs in specific countries.

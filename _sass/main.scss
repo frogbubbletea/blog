@@ -13,6 +13,9 @@
     /*--base-fg: #4c4f69;*/  /* catppuccin latte text */ 
     /*--dark-fg: #cad3f5;*/  /* catppuccin macchiato text */
     /*--url: #40a02b;*/ /* catppuccin latte green */
+
+    /* Code block background color */
+    --code-bg: #24273a;
 }
 
 /* Enable smooth scrolling */
@@ -77,6 +80,22 @@ button {
 /* Set link text color */
 a {
     color: var(--url)
+}
+
+/* Style code blocks */
+code {
+    display: block;
+    font-family: "Roboto Mono", "Noto Emoji", monospace;
+    font-size: inherit;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-wrap: wrap;
+    background-color: var(--code-bg);
+    box-decoration-break: clone;
+    box-sizing: border-box;
+    padding: 1em;
+    border-radius: 8px;
 }
 
 .current {

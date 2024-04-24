@@ -113,6 +113,7 @@
     padding: 1em;
     border-radius: 0.5em;
     background-color: var(--sec-bg);
+    transition: 200ms;
 }
 /* Display posts vertically on mobile */
 @media (max-width: 1200px) {
@@ -161,4 +162,9 @@
     color: var(--base-bg);
     border: unset;
     cursor: pointer;
+}
+
+/* Hover effect for posts */
+.post-card:hover {
+    box-shadow: inset 0px 0px 0px 2px var(--url);
 }
