@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --base-bg: #fdf6e3; /* everforest light medium bg0 */
   --sec-bg: #efebd4; /* everforest light medium bg_dim */
@@ -258,7 +259,7 @@ code {
 }
 
 /* Set text color for each post */
-.post-card > a, .tag-box {
+.post-card > a, .tag-box, .tag-box-link {
   text-decoration: none;
 }
 
@@ -418,3 +419,5 @@ code {
   justify-content: center;
   column-gap: 1em;
 }
+
+/*# sourceMappingURL=styles.css.map */

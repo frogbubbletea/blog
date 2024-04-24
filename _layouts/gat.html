@@ -43,7 +43,7 @@ title: page.name
                     <!-- Tags -->
                     <div class="post-tags">
                         {% for tag in post.tags %}
-                            <a>
+                            <a class="tag-box-link" href="{{ site.baseurl }}/gats/{{ tag }}">
                                 <button class="tag-box" type="button">{{ tag }}</button>
                             </a>
                         {% endfor %}
