@@ -36,6 +36,27 @@
     text-decoration: none;
 }
 
+/* Style front page theme selection menu */
+#front-page-color-select {
+    border: unset;
+    background-color: inherit;
+    color: var(--url);
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 6.25em;
+}
+
+/* Arrange front page links vertically on really narrow phones */
+@media(max-width: 400px) {
+    .front-page-nav {
+        flex-direction: column;
+        align-items: flex-end;
+        row-gap: 0.5em;
+    }
+}
+
 /* Align the scroll down prompt to the bottom of frontPage */
 .front-page > .front-page-scroll-prompt {
     position: absolute;

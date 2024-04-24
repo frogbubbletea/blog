@@ -15,12 +15,19 @@
     <link rel="stylesheet" href="/blog/assets/css/styles.css">
   </head>
   <body>
-    <div class="front-page-nav">
+    <!-- Load color schemes -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+<script src="/blog/assets/js/change-theme.js"></script>
+<div class="front-page-nav">
     
       <a href="/blog/" >🪻 Blog</a>
     
       <a href="/blog/tags.html" >🍋 Tags</a>
     
+    <form>
+      <select id="front-page-color-select" onchange="changeColorscheme()"></select>
+  </form>
 </div>
     <h1>Latest Posts</h1>
 
