@@ -8,7 +8,7 @@ layout: default
     <div class="front-page-scroll-prompt post-page">
         <div class="post-tags front-page-post-tags">
             {% for tag in page.tags %}
-                <a>
+                <a href="{{ site.baseurl }}/gats/{{ tag }}">
                     <button class="tag-box" type="button">{{ tag }}</button>
                 </a>
             {% endfor %}
