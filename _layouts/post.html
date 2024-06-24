@@ -14,7 +14,7 @@ layout: default
             {% endfor %}
         </div>
         <div class="post-page-date-author">
-            <p class="post-page-date">{{ page.date | date: "%b %-d %Y" }}</p>
+            <p class="post-page-date">{{ page.date | date: "%b %-d, %Y" }}</p>
             <p class="post-page-separator">✦</p>
             <p class="post-page-author">
                 {% assign author = site.authors | where: 'name', page.author | first %}

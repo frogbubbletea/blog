@@ -176,6 +176,14 @@
     text-decoration: none;
 }
 
+/* Add underline when post title is hovered on */
+.post-title > h3 {
+    transition: 200ms;
+}
+.post-title > h3:hover { 
+    color: var(--url);
+}
+
 /* Style for each tag */
 .tag-box {
     font-size: 0.75em;
