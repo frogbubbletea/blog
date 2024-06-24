@@ -20,6 +20,7 @@
 /* Enable smooth scrolling */
 html {
   scroll-behavior: smooth;
+  scrollbar-color: var(--url) transparent;
 }
 
 /* Apply background color to all pages */
