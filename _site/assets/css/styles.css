@@ -1,11 +1,11 @@
 @charset "UTF-8";
 :root {
-  --base-bg: #fdf6e3; /* everforest light medium bg0 */
-  --sec-bg: #efebd4; /* everforest light medium bg_dim */
-  --dark-bg: #2d353b; /* everforest dark medium bg0 */
-  --base-fg: #5c6a72; /* everforest light medium fg */
-  --dark-fg: #d3c6aa; /* everforest dark medium fg */
-  --url: #8da101; /* everforest light medium green */
+  --base-bg: 253, 246, 227; /* everforest light medium bg0 */
+  --sec-bg: 239, 235, 212; /* everforest light medium bg_dim */
+  --dark-bg: 45, 53, 59; /* everforest dark medium bg0 */
+  --base-fg: 92, 106, 114; /* everforest light medium fg */
+  --dark-fg: 211, 198, 170; /* everforest dark medium fg */
+  --url: 141, 161, 1; /* everforest light medium green */
   /* Alternate color scheme */
   /*--base-bg: #eff1f5;*/ /* catppuccin latte base */
   /*--sec-bg: #dce0e8;*/ /* catppuccin latte crust */
@@ -14,18 +14,18 @@
   /*--dark-fg: #cad3f5;*/ /* catppuccin macchiato text */
   /*--url: #40a02b;*/ /* catppuccin latte green */
   /* Code block background color */
-  --code-bg: #24273a;
+  --code-bg: 36, 39, 58;
 }
 
 /* Enable smooth scrolling */
 html {
   scroll-behavior: smooth;
-  scrollbar-color: var(--url) transparent;
+  scrollbar-color: rgb(var(--url)) transparent;
 }
 
 /* Apply background color to all pages */
 body {
-  background-color: var(--base-bg);
+  background-color: rgb(var(--base-bg));
   margin: 0;
   padding: 0;
   animation: fade-in 0.7s ease-in forwards;
@@ -49,14 +49,14 @@ h1, h2, h3 {
   font-family: "Libre Baskerville", "Noto Color Emoji", serif;
   font-weight: 400;
   font-style: normal;
-  color: var(--base-fg);
+  color: rgb(var(--base-fg));
 }
 
 /* Set font for body text */
 p, a, ul, dl, select {
   font-family: Inter, "Noto Color Emoji", sans-serif;
   font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
-  color: var(--base-fg);
+  color: rgb(var(--base-fg));
 }
 
 @supports (font-variation-settings: normal) {
@@ -83,7 +83,7 @@ button {
 }
 /* Set link text color */
 a {
-  color: var(--url);
+  color: rgb(var(--url));
 }
 
 /* Style code blocks */
@@ -95,7 +95,7 @@ code {
   font-weight: 400;
   font-style: normal;
   text-wrap: wrap;
-  background-color: var(--code-bg);
+  background-color: rgb(var(--code-bg));
   box-decoration-break: clone;
   box-sizing: border-box;
   padding: 1em;
@@ -148,7 +148,7 @@ code {
 #front-page-color-select {
   border: unset;
   background-color: inherit;
-  color: var(--url);
+  color: rgb(var(--url));
   font-size: 1em;
   margin: 0;
   padding: 0;
@@ -174,7 +174,7 @@ code {
 
 /* Animate the scroll down prompt arrow */
 #front-page-down-arrow {
-  color: var(--base-fg);
+  color: rgb(var(--base-fg));
   animation: updown 2s ease-in-out infinite;
 }
 
@@ -205,7 +205,7 @@ code {
   margin: 0;
   padding: 1em 0 1em 0;
   text-align: center;
-  background-color: var(--sec-bg);
+  background-color: rgb(var(--sec-bg));
 }
 
 .intro > h2, .intro > p {
@@ -214,7 +214,7 @@ code {
 
 /* Set color for posts list heading */
 .intro.posts-heading {
-  background-color: var(--base-bg);
+  background-color: rgb(var(--base-bg));
 }
 
 /* Layout for posts list */
@@ -230,7 +230,7 @@ code {
   margin: 0;
   box-sizing: border-box;
   padding: 1em 12.5vw 2em 12.5vw;
-  background-color: var(--base-bg);
+  background-color: rgb(var(--base-bg));
 }
 
 /* Style for each post */
@@ -246,7 +246,7 @@ code {
   box-sizing: border-box;
   padding: 1em;
   border-radius: 0.5em;
-  background-color: var(--sec-bg);
+  background-color: rgb(var(--sec-bg));
   transition: 200ms;
 }
 
@@ -295,7 +295,7 @@ code {
 }
 
 .post-title > h3:hover {
-  color: var(--url);
+  color: rgb(var(--url));
 }
 
 /* Style for each tag */
@@ -305,22 +305,22 @@ code {
   border-radius: 4px;
   padding: 0.25em 0.5em;
   transition: 200ms;
-  background-color: var(--url);
-  color: var(--base-bg);
+  background-color: rgb(var(--url));
+  color: rgb(var(--base-bg));
   border: unset;
   cursor: pointer;
 }
 
 /* Hover effect for posts */
 .post-card:hover {
-  box-shadow: inset 0px 0px 0px 2px var(--url);
+  box-shadow: inset 0px 0px 0px 2px rgb(var(--url));
 }
 
 /* Set paginator font */
 .paginator-controls > span {
   font-family: Inter, "Noto Color Emoji", sans-serif;
   font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
-  color: var(--base-fg);
+  color: rgb(var(--base-fg));
 }
 
 @supports (font-variation-settings: normal) {
@@ -403,7 +403,7 @@ css-doodle {
   width: 100vw;
   max-width: 100%;
   padding: 2em 0 2em 0;
-  background-color: var(--base-bg);
+  background-color: rgb(var(--base-bg));
 }
 
 .post-content > * {
@@ -452,7 +452,7 @@ css-doodle {
   max-width: 100%;
   padding: 1em 2em 1em 2em;
   margin: 0;
-  background-color: var(--dark-bg);
+  background-color: rgb(var(--dark-bg));
 }
 
 /* Disable underlining in footer buttons */
@@ -469,13 +469,13 @@ css-doodle {
 /* Align text to the left, icons to the right */
 .footer > p {
   text-align: left;
-  color: var(--dark-fg);
+  color: rgb(var(--dark-fg));
 }
 
 /* Set color of footer icons */
 #footer-github, #footer-email {
   transition: 200ms;
-  color: var(--dark-fg);
+  color: rgb(var(--dark-fg));
 }
 
 #footer-github:hover, #footer-email:hover {
