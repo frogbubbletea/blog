@@ -34,6 +34,8 @@ layout: default
     {{ page.excerpt }}
 </div>
 
-<div class="post-content" id="content">
-    {{ content | remove_first: page.excerpt }}
+<div class="post-background" id="background">
+    <div class="post-content" id="content">
+        {{ content | remove_first: page.excerpt }}
+    </div>
 </div>
