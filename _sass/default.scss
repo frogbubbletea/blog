@@ -92,6 +92,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
     width: 100vw;
     max-width: 100%;
     margin: 0;
@@ -102,6 +103,16 @@
 
 .intro > h2, .intro > p {
     max-width: 75%
+}
+
+/* Reduce padding on mobile */
+@media (max-width: 1200px) {
+    .intro {
+        padding: 1em 1.5em 1em 1.5em;
+    }
+    .intro > h2, .intro > p {
+        max-width: 100%;
+    }
 }
 
 /* Set color for posts list heading */
@@ -149,10 +160,11 @@
     .posts-list {
         flex-direction: column;
         align-items: center;
+        padding: 1em 1.5em 2em 1.5em;
     }
     .post-card {
-        width: 75vw;
-        max-width: 75vw;
+        width: 100%;
+        max-width: 100%;
     }
 }
 
